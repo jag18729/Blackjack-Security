@@ -1,38 +1,45 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Michroma&family=Roboto+Condensed&display=swap');
+
+
+body {
+  font-family: "Roboto Condensed" sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#logo-title{
+  font-family: 'Michroma', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+#logo{
+  vertical-align: middle;
+  border-radius: 54%;
+  border-style: double;
+  width: 3.85rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Menu Links */
+nav a.nav-link{
+  font-weight: 500;
+  letter-spacing: 0.0375rem;
+  cursor: pointer;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+#link-one{
+  color: red;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#brand{
+  max-width: 17.25rem;
+  padding: 0 !important;
+  font-family: 'Michroma', sans-serif;
+  white-space: pre;
+}
+
+.navbar-nav > active , .navbar-nav > a:focus{
+  border-top: 0.1875rem solid rgb(234, 38, 38);
+}
+
+navbar-dark .navbar-toggler {
+  border-color: rgb(255 0 0);
 }
