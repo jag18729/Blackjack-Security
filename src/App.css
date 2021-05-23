@@ -10,6 +10,12 @@ body {
 }
 
 
+/* NavBar */
+
+nav {
+  z-index: 2;
+}
+
 #logo{
   vertical-align: middle;
   border-radius: 54%;
@@ -56,7 +62,6 @@ navbar-dark .navbar-toggler {
 
 .header-wrapper{
   position: relative;
-  background: url('./images/city.jpg');
   background-size: cover;
   background-position: center;
   height: 90vh;
@@ -64,6 +69,10 @@ navbar-dark .navbar-toggler {
 
 .main-info{
   display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -72,4 +81,60 @@ navbar-dark .navbar-toggler {
   font-weight: 600;
   background-color: rgb(39, 36, 36);
   color: aliceblue;
+  background: url('./images/city.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+/* TYPED TEXTED */
+  .typed-text{
+    font-size: 2rem;
+    color: white;
+  }
+@media(max-width: 768px){
+  .main-info h3{
+    font-size: 1.5rem !important;
+  }
+  .typed-text{
+    font-size:1.1rem !important;
+  }
+}
+.btn-main-offer{
+  border: 1px solid red;
+  text-transform: uppercase;
+  border-radius: 0;
+  padding: 0.75rem;
+  color: rgb(104, 47, 189);
+  margin: 2rem;
+}
+btn {
+  color: #dc3545;
+  border-color: #dc3545;
+  background-color: aquamarine;
+}
+
+btn:hover {
+  color: #dc3545;
+  border-color: #dc3545;
+  background-color: rgb(92, 103, 99);
+}
+
+.tsparticles-canvas-el{
+  position  : absolute;
+  height: 100vh;
+  width: 100vh;
+  z-index: 1;
+}
+
+.btn-main-offer :hover{
+  text-decoration: none;
+  background-color: rgb(109, 218, 73);
+  color: rgb(15, 3, 148);
+}
+
+@media(max-width: 768px){
+  .tsparticles-canvas {
+    display: none;
+  }
 }
