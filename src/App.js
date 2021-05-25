@@ -2,12 +2,14 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/NavBar';
 import Header from './components/Header';
-import Particles from 'react-particles-js';
+// import Particles from 'react-particles-js';
+import Services from './components/Services';
+
 
 function App() {
   return (
     <>
-      <Particles
+      {/* <Particles
         params={{
           particles: {
             number: {
@@ -27,9 +29,10 @@ function App() {
           }
         }
         }
-      />
+      /> */}
       <NavBar />
       <Header />
+      <Services />
     </>
   );
 }

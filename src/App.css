@@ -61,6 +61,7 @@ navbar-dark .navbar-toggler {
 /* HEADER */
 
 .header-wrapper{
+  background: url('./images/city.jpg');
   position: relative;
   background-size: cover;
   background-position: center;
@@ -70,6 +71,7 @@ navbar-dark .navbar-toggler {
 .main-info{
   display: flex;
   position: absolute;
+  padding: 0rem 39rem 18rem 0rem;
   top: 0;
   left: 0;
   bottom: 0;
@@ -79,12 +81,21 @@ navbar-dark .navbar-toggler {
   text-align: center;
   font-family: 'Philosopher', sans-serif;
   font-weight: 600;
-  background-color: rgb(39, 36, 36);
+  background-color: transparent;
   color: aliceblue;
-  background: url('./images/city.jpg');
   background-size: cover;
   background-position: center;
   z-index: 1;
+}
+
+.title-button{
+  padding: 6px 0px 12px;
+  box-shadow: 0px 2px 6px #3e3e3d;
+  color: #ded0a1;
+  display: inline-grid;
+  background-color: #212529;
+  border: outset;
+  border-radius: 20px;
 }
 
 /* TYPED TEXTED */
@@ -137,4 +148,29 @@ btn:hover {
   .tsparticles-canvas {
     display: none;
   }
+}
+
+.card-deck-services{
+  display: flex;
+  justify-content: space-between;
+}
+
+.bg-light {
+  background-color: #212529!important;
+  width: 50rem;
+  height: 31rem;
+}
+
+
+/* Services  */
+.services-title{
+  background-color: black;
+  text-align: center;
+  color:rgb(234, 38, 45)
+}
+.btn-outline-danger {
+  color: #dc3545;
+  border-color: #dc3545;
+  font-size: x-large;
+  box-shadow: 2px 1px 7px 0px #f8d49a;
 }
