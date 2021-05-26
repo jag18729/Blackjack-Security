@@ -19,7 +19,7 @@ const Header = () => {
           />
           <br />
         </div>
-        <Button bg="lg" variant="danger" block flushed to="">Contact Us
+        <Button size="lg" variant="danger" block flushed to="">Contact Us
         </Button>
         </Jumbotron>
         </Container>

@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Michroma&family=Maven+Pro:wght@437&Philosopher&family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p&family=Maven+Pro:wght@437&family=Michroma&family=Play&family=Roboto+Condensed:wght@300&display=swap');
 
 
 body {
   font-family: "Roboto Condensed" sans-serif;
 }
-
 #logo-title{
   font-family: 'Michroma', sans-serif;
 }
@@ -66,24 +65,30 @@ navbar-dark .navbar-toggler {
   background-size: cover;
   background-position: center;
   height: 90vh;
+  box-shadow: 1px 1px 10px grey;
+  border-radius: 0px 0px 17px 17px;
 }
 
 .header-main{
-  border-right-style: solid;
-  margin: 0rem 0rem 1rem 0rem;
-  padding: 0rem 1rem 1rem 0rem;
+  border-radius: .50rem;
+  margin: 0rem 1rem 0rem 0rem;
+  padding: 0rem 0rem 2rem 0rem;
   text-align: center;
-  font-family: 'Philosopher', sans-serif;
+  font-family: "Roboto Condensed" sans-serif;
   background-color: transparent;
   z-index: 1;
   box-shadow: 1px 5px 20px #3e3e3d;
   display: inline-grid;
-  border-color: #dc3545;
   width: 3px;
 }
 
-#header-title{
+.header-title h2{
   padding: 13px 5px 20px;
+  font-family: 'M PLUS 1p', sans-serif;
+}
+
+.header-title-text{
+  font-family: 'M PLUS 1p', sans-serif;
 }
 
 /* TYPED TEXTED */
@@ -96,6 +101,7 @@ navbar-dark .navbar-toggler {
     display: block;
     position: static;
     text-align: left;
+    white-space: pre-line;
 }
     
 @media(max-width: 768px){
@@ -159,13 +165,43 @@ btn:hover {
 
 /* Services  */
 .services-title{
-  background-color: black;
+  background-color: #ffff;
   text-align: center;
-  color:rgb(234, 38, 45)
+  color:rgb(234, 38, 45);
+  height: 100rem;
 }
+.services-title-text{
+  font-family: 'M PLUS 1p', sans-serif;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  color: #262626;
+  font-size: xxx-large;
+  text-shadow: 2px 2px 3px #5c5252;
+}
+
+
 .btn-danger {
   color: #dc3545;
   border-color: #dc3545;
   font-size: x-large;
   float: right;
+}
+
+.card-deck-services{
+  background-color: transparent;
+  border: thin;
+  box-shadow: 1px 1px 14px black;
+  border-radius: 8px;
+  display: flex;
+  padding:1rem;
+  height: 100rem;
+}
+.card {
+  background-color:aqua;
+}
+.border-dark {
+border-color: #004f9f!important;
+margin: 0.5rem;
+box-shadow: 0rem 0rem 1rem grey;
+width: max-content;
 }
