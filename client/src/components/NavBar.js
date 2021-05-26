@@ -9,14 +9,14 @@ const NavBar = () => {
     <Navbar bg="dark" variant='dark' expand="lg" collapseOnSelect fixed>
       <Container >
         <Navbar.Brand id="brand" href="#home">
-          <img id="logo" src={Logo} alt="logo" />{''}   BlackJack Security
-          <h5 id="logo-title" ></h5>
+          <img id="logo" src={Logo} alt="logo" />{''}   
+          <h5 id="logo-title" > BlackJack Security</h5>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <FontAwesomeIcon />
-          <Nav className="ms-auto">
-            <Nav.Link id="home-link" href="#home" >Home</Nav.Link>
+          <Nav className="ms-1">
+            <Nav.Link id="home-link" href="#home" active>Home</Nav.Link>
             <Nav.Link id="services-link" href="#services">Services</Nav.Link>
             <Nav.Link id="about-us-link" href="#" >About Us</Nav.Link>
             <Nav.Link id="contact-us-link" href="#link">Contact Us</Nav.Link>
