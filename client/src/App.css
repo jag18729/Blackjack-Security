@@ -10,6 +10,13 @@ body {
 
 
 /* NavBar */
+.navbar-main{
+  background-color: red;
+}
+
+.nav-container{
+  background-color:yellow;
+}
 
 nav {
   z-index: 2;
@@ -65,16 +72,17 @@ navbar-dark .navbar-toggler {
 /* HEADER */
 
 .header-wrapper{
+  height: 90vh;
+  box-shadow: 1px 1px 10px grey;
+  border-radius: 0px 0px 17px 17px;
   background: url('./images/city.jpg');
   position: relative;
   background-size: cover;
   background-position: center;
-  height: 90vh;
-  box-shadow: 1px 1px 10px grey;
-  border-radius: 0px 0px 17px 17px;
 }
 
 .header-main{
+  margin: 0rem 18rem 1rem 18rem;
   border-radius: .50rem;
   margin: 0rem 1rem 0rem 0rem;
   padding: 0rem 0rem 2rem 0rem;
@@ -82,8 +90,6 @@ navbar-dark .navbar-toggler {
   font-family: "Roboto Condensed" sans-serif;
   background-color: transparent;
   z-index: 1;
-  box-shadow: 1px 5px 20px #3e3e3d;
-  display: inline-grid;
   width: 3px;
 }
 
@@ -229,4 +235,9 @@ border-color: #004f9f!important;
 margin: 0.5rem;
 box-shadow: 0rem 0rem 1rem grey;
 width: max-content;
+}
+
+#contact-us-button{
+  width: 21rem;
+  margin: 0rem 28rem 0rem 0rem;
 }

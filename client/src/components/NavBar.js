@@ -1,20 +1,17 @@
 import React from 'react';
-import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
+import { Navbar, Nav, Container } from 'react-bootstrap';
 import Logo from '../images/logo_invert.png';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/react-fontawesome';
 
 const NavBar = () => {
   return (
-    <Navbar bg="dark" variant='dark' expand="lg" collapseOnSelect fixed>
-      <Container >
+    <Navbar className="navbar-main" bg="dark" variant='dark' expand="lg" collapseOnSelect fixed>
+      <Container className="nav-container">
         <Navbar.Brand id="brand" href="#home">
           <img id="logo" src={Logo} alt="logo" />{''}   
           <h5 id="logo-title" > BlackJack Security</h5>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <FontAwesomeIcon />
           <Nav className="ms-1">
             <Nav.Link id="home-link" href="#home" active>Home</Nav.Link>
             <Nav.Link id="services-link" href="#services">Services</Nav.Link>
