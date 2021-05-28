@@ -1,5 +1,12 @@
 {
   "dependencies": {
-    "typewriter-effect": "^2.17.0"
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.11",
+    "nodemon": "^2.0.7"
+  },
+  "scripts": {
+    "start": "node backend/server",
+    "server": "nodemon backend/server"
   }
 }

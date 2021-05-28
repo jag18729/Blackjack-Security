@@ -15,7 +15,7 @@ body {
 }
 
 .nav-container{
-  background-color:yellow;
+  background-color:grey;
 }
 
 nav {
@@ -53,9 +53,9 @@ nav a.nav-link{
   white-space: pre;
 }
 
-/* .navbar-nav > active , .navbar-nav > a:focus{
+.navbar-nav > active , .navbar-nav > a:focus{
   border-top: 0.1875rem solid rgb(234, 38, 38);
-} */
+}
 
 .navbar-nav > active , .navbar-nav > a:hover{
   border-top: 0.1875rem solid rgb(234, 38, 38);
