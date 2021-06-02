@@ -1,37 +1,20 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import React, {useState, useEffect} from 'react';
+import {  Container } from 'react-bootstrap';
 import NavBar from './components/NavBar';
 import Header from './components/Header';
-// import Particles from 'react-particles-js';
 import Services from './components/Services';
+import AboutUs from './components/AboutUs';
 
 
 function App() {
+
   return (
     <>
-      {/* <Particles
-        params={{
-          particles: {
-            number: {
-              value: 30,
-              density: {
-                enable: true,
-                value_area: 900,
-              }
-            },
-            shape: {
-              type: "square",
-              stroke: {
-                width: 6,
-                color: "tan",
-              }
-            }
-          }
-        }
-        }
-      /> */}
       <NavBar />
       <Header />
+      <AboutUs />
       <Services />
     </>
   );

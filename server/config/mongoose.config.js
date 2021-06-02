@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect("mongodb://localhost/BlackJackSecurityDb", {
+mongoose.connect("mongodb://localhost/BlackJackSecuirtyDB", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })

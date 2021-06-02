@@ -10,16 +10,10 @@ body {
 
 
 /* NavBar */
-.navbar-main{
-  background-color: red;
-}
-
-.nav-container{
-  background-color:grey;
-}
-
-nav {
-  z-index: 2;
+.navbar-expand-lg .navbar-collapse {
+  display: flex!important;
+  /* flex-basis: auto; */
+  flex-direction: row-reverse;
 }
 
 #logo{
@@ -72,7 +66,7 @@ navbar-dark .navbar-toggler {
 /* HEADER */
 
 .header-wrapper{
-  height: 90vh;
+  height: 100vh;
   box-shadow: 1px 1px 10px grey;
   border-radius: 0px 0px 17px 17px;
   background: url('./images/city.jpg');
@@ -195,15 +189,21 @@ btn:hover {
 
 
 /* Services  */
+.services-card{
+  background-color:blue;
+  width: 100rem;
+}
+
 .services-title{
   background-color: #ffff;
   text-align: center;
   color:rgb(234, 38, 45);
-  height: 100rem;
+  height: 120rem;
 }
 .services-title-text{
   font-family: 'M PLUS 1p', sans-serif;
   padding-top: 3rem;
+  text-align: center;
   padding-bottom: 1rem;
   color: #262626;
   font-size: xxx-large;
@@ -217,18 +217,23 @@ btn:hover {
   font-size: x-large;
   float: right;
 }
-
+.services-wrapper{
+  background-color: blue;
+}
 .card-deck-services{
   background-color: transparent;
   border: thin;
   box-shadow: 1px 1px 14px black;
   border-radius: 8px;
   display: flex;
+  flex-flow: wrap;
   padding:1rem;
-  height: 100rem;
+  height: max-content;
 }
+
 .card {
   background-color:aqua;
+  height: fit-content;
 }
 .border-dark {
 border-color: #004f9f!important;
@@ -240,4 +245,25 @@ width: max-content;
 #contact-us-button{
   width: 21rem;
   margin: 0rem 28rem 0rem 0rem;
+}
+
+/* about us */
+.about-us-wrapper{
+  background-color:blueviolet;
+  display: flex;
+  flex-direction: column;
+}
+.about-us-container{
+  background-color: #212529;
+  display: flex;
+  justify-content: space-around;
+  padding: 1%;
+}
+#about-us-picture{
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+}
+#about-us-card{
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
 }

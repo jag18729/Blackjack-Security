@@ -1,7 +1,14 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
-const PORT = 9998;
+let PORT = 8000;
 
-require("./server/routes/routes")(app);
+require('./server/config/mongoose.config');
 
-app.listen(PORT, () => console.log(`Application running hot on port ${PORT}, Happy Hacking!`))
+app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }))
+require('./server/routes/quote.routes')(app);
+app.listen(PORT, () => {
+  console.log(`Comm is up. Server running hot on port ${PORT}`)
+}) 
