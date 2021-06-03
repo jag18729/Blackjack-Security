@@ -267,3 +267,13 @@ width: max-content;
   width: -webkit-fill-available;
   height: -webkit-fill-available;
 }
+.about-us-picture{
+  width: 30%;
+}
+.about-us-text{
+  background-color: #ffff;
+  height: fit-content;
+  width: 39rem;
+  border: dashed;
+  padding: 0rem 0rem;
+}

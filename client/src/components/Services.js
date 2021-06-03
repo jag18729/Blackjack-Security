@@ -1,16 +1,16 @@
 import React from 'react';
-import { Card, CardDeck, Container, CardColumns } from 'react-bootstrap';
+import { Card, CardDeck, Container } from 'react-bootstrap';
 
 
 const Services = () => {
   return (
-    < >
+    <div id="services-link">
       <Container className="services-wrapper"> 
         <h2 className='services-title-text'>Services</h2>
         
-        <CardDeck className="card-deck-services">
+        <CardDeck className="card-deck-services" >
           <Card bg='light' border='dark' text='dark' className="card">
-            <Card.Img variant="top" src="https://www.securityusainc.com/Images/SecurityUSA/Divisions/Res.jpg" className="card-image" />
+            <Card.Img  variant="top" src="https://www.securityusainc.com/Images/SecurityUSA/Divisions/Res.jpg" className="card-image" />
             <Card.Body>
               <Card.Title >
                 <h1 className="title">Residential Security</h1>
@@ -53,7 +53,7 @@ const Services = () => {
         </CardDeck>
         
       </Container >
-    </>
+    </div>
   );
 };
 
