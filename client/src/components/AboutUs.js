@@ -3,8 +3,8 @@ import { Container, Col, Row, Carousel, Image, Card, Button } from 'react-bootst
 import aboutUsPic from "../images/vet_owned.JPG";
 const AboutUs = () => {
   return (
-    <div className="about-us-wrapper">
-        <h1 className="display-6 text-center"> About Us</h1>
+    <div className="about-us-wrapper" id="about-us">
+        <h1 className="display-6 text-center py-3"> About Us</h1>
       <div className="about-us-container">
         <img class="about-us-picture" src={aboutUsPic} />
         <div class="about-us-text">

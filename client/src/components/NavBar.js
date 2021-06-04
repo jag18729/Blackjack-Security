@@ -13,8 +13,15 @@ const NavBar = () => {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
+            <Link
+              activeClass="active"
+              to="contact-us"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            />
           <Nav className="mr-auto">
-          <Link to="services" > sr...</Link>
             <Nav.Link id="home-link" href="#home">Home</Nav.Link>
             <Nav.Link id="services-link" href="#services">Services</Nav.Link>
             <Nav.Link id="about-us-link" href="#" >About Us</Nav.Link>
