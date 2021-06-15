@@ -2,6 +2,7 @@ import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import Logo from '../images/logo_invert.png';
 import {  Link, animatedScroll as scroll  } from 'react-scroll';
+// import { LinkContiner } from "react-router-bootstrap";
 
 const NavBar = () => {
   return (
@@ -22,10 +23,11 @@ const NavBar = () => {
               duration={500}
             />
           <Nav className="mr-auto">
-            <Nav.Link id="home-link" href="#home">Home</Nav.Link>
-            <Nav.Link id="services-link" href="#services">Services</Nav.Link>
-            <Nav.Link id="about-us-link" href="#" >About Us</Nav.Link>
-            <Nav.Link id="contact-us-link" href="#link">Contact Us</Nav.Link>
+            <Nav.Link id="home-link" href="/">Home</Nav.Link>
+            <Nav.Link id="services-link" href="/services">Services</Nav.Link>
+            <Nav.Link id="about-us-link" href="/about-us" >About Us</Nav.Link>
+            
+            <Nav.Link id="contact-us-link" href="/contact-us">Contact Us</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container >
