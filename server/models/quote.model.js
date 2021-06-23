@@ -19,13 +19,11 @@ const QuoteSchema = new mongoose.Schema({
   },
   city: {
     type: String,
-    required: [true, "Please enter a valid city"],
     minlength: [3, "City must be at least 3 characters."]
   },
   phone: {
-    type: Number,
+    type: String,
     minlength: [3, "Phone number must be at least 10 digits."],
-    required: [true, "Please enter the best phone number to reach out you."],
   },
   location: {
     type: String,
