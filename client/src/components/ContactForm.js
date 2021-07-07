@@ -67,8 +67,8 @@ render() {
       <>
           <h1 className="p-heading1">Get in Touch</h1>
           <Form onSubmit={this.handleSubmit.bind(this)}>
-            <Row form>
-              <Col md={5}>
+            <Row >
+              <Col md={6}>
               <FormGroup  controlId="formBasicName">
                 <Label className="text-muted">First Name</Label>
                 <Input
@@ -81,7 +81,7 @@ render() {
                   />
               </FormGroup>
               </Col>
-              <Col md={5}>
+              <Col md={6}>
               <FormGroup  controlId="formLastName">
                 <Label className="text-muted">Last Name</Label>
                 <Input
@@ -94,7 +94,7 @@ render() {
                 />
               </FormGroup>
               </Col>
-            </Row>
+              </Row>
             <FormGroup controlId="formBasicEmail">
               <Label className="text-muted">Email address</Label>
               <Input
