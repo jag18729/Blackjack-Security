@@ -59,18 +59,20 @@ export default props => {
             <Form.Group controlId='first_name'>
             <Form.Label>First Name</Form.Label>
             <Form.Control
+              name="first_name"
               type='name'
               placeholder='First Name'
               value={first_name}
               onChange={(e) => setFirstName(e.target.value)}
-            ></Form.Control>
+            />
           </Form.Group>
           </Row>
           <Row>
-          <Form.Group  controlId={last_name}>
+          <Form.Group controlId={last_name}>
             <Form.Label>Last Name</Form.Label>
             <Form.Control placeholder="Last Name"
               type="name"
+              name={last_name}
               placeholder="Last Name"
               value={last_name}
               onChange={(e) => setLastName(e.target.value)}

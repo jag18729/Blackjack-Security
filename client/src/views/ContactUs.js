@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Link, navigate } from '@reach/router';
 import { Container, Button, Image, Row, Col} from 'react-bootstrap';
 import Form from '../components/Form';
+import ContactForm from '../components/ContactForm'
 
 const ContactUs = (props) => {
   const [errors, setErrors] = useState({});
@@ -38,7 +39,8 @@ const ContactUs = (props) => {
               Our company stays up to date with our most advanced digital patrol and reporting software.
           </Col>
           <Col  className="p-5 m-2" id="contact-us-col-2">
-          <Form errors={errors} onSubmitProp={createQuote} />
+          {/* <Form errors={errors} onSubmitProp={createQuote} /> */}
+          <ContactForm />
           </Col>
         </Row>
       </Container>
