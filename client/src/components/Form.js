@@ -59,7 +59,7 @@ export default props => {
       <Form onSubmit={onSubmitHandler} fluid>
       {/* {errors.map((err, index) => <h2 key={index}>{err}</h2>)} */}
           <Row>
-            <Form.Group controlId='first_name'>
+          <Form.Group as={Col} controlId='first_name'>
             <Form.Label>First Name</Form.Label>
             <Form.Control
               name="first_name"
@@ -72,8 +72,7 @@ export default props => {
               }
             />
           </Form.Group>
-          </Row>
-          <Row>
+          <Col>
           <Form.Group controlId="last_name">
             <Form.Label>Last Name</Form.Label>
             <Form.Control placeholder="Last Name"
@@ -85,9 +84,10 @@ export default props => {
                 console.log("e.target.value", e.target.value)
                 setLastName(e.target.value)}
               }
-            />
+              />
           </Form.Group>
-        </Row>
+        </Col>
+              </Row>
 
               <Row className="mb-3">
               <Form.Group as={Col} controlId="company">

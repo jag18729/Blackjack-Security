@@ -290,4 +290,7 @@ width: max-content;
   background-color:green;
 
 }
+#bulletpoints{
+  background-color: #004f9f;
+}
 span.name { color:#FF0000;font-weight:bold;font-family:Tahoma;font-size:20 }
