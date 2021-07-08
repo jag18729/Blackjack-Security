@@ -1,28 +1,26 @@
+import axios  from 'axios'
 import React, { Component } from 'react'
 import * as emailjs from 'emailjs-com'
-import { Row, Col, Button, Form, FormGroup, Label, Input } from 'reactstrap'
+import { Row, Col, Button, Form, FormGroup, Label, Input, Alert } from 'reactstrap'
 class ContactForm extends Component {
   state = {
-    "first_name": "Rafael",
-    "last_name": "Garcia",
-    "email":"r@123.com",
-    "company":"usa",
-    "city":"Los Angeles, CA",
-    "phone":"8187418210",
-    "location":"Los Angeles",
-    "service":"Residential",
-    "description": "blahh",
-    "locations":[
-      'Los Angeles County',
-      'Ventura County',
-      'San Bernandino County'
-    ],
-    "services":[
-    'Alarm Response',
-    'Patrol Survalence',
-    'Residential Security',
-    'Private Event Escort/ Detail'
-    ]
+    // "first_name": "Rafael",
+    // "last_name": "Garcia",
+    // "email":"r@123.com",
+    // "company":"usa",
+    // "city":"Los Angeles, CA",
+    // "phone":"8187418210",
+    // "location":"Los Angeles",
+    // "service":"Residential",
+    // "location": 'Los Angeles County',
+    // "services": 'Alarm Response',
+    // "description": "blahh",
+    visible: false
+  }
+  toggle(){
+    this.setState({
+      visible: ! this.state.visible
+    })
   }
     handleSubmit(e) {
     e.preventDefault()
@@ -40,10 +38,17 @@ class ContactForm extends Component {
      }
      emailjs.send(
       'service_cjqdoji',
-      'template_1dm2yfm',
+      'template_ypari0h',
        templateParams,
       'user_pQsMaKVuEoXJYQNinWsxk'
      )
+     .then((result) => {
+         console.log(result.text);
+         alert('Sent!');
+     }, (err) => {
+         console.log(err.text);
+         alert(JSON.stringify(err));
+     });
      this.resetForm()
  }
 resetForm() {
@@ -65,7 +70,7 @@ handleChange = (param, e) => {
 render() {
     return (
       <>
-          <h1 className="p-heading1">Get in Touch</h1>
+          <h1 className="p-heading1">Request a Quote!</h1>
           <Form onSubmit={this.handleSubmit.bind(this)}>
             <Row >
               <Col md={6}>
@@ -117,21 +122,21 @@ render() {
                 placeholder="Company"
               />
             </FormGroup>
-            {/* <Form.Group controlId="formBasicPhone">
-                <Form.Label className="text-muted">Phone Number</Form.Label>
-                <Form.Input
-                  type="text"
+            <FormGroup controlId="formBasicPhone">
+                <Label className="text-muted">Phone Number</Label>
+                <Input
+                  type="phone"
                   name="phone"
                   className="text-primary"
                   value={this.state.phone}
                   onChange={this.handleChange.bind(this,'phone')}
                   placeholder="323-123-4567"
                   />
-              </Form.Group>
-                <Form.Group  controlId="formBasicLocation">
-                  <Form.Label>Location</Form.Label>
-                  <Form.Control
-                  as="select"
+              </FormGroup>
+                <FormGroup  controlId="formBasicLocation">
+                  <Label>Location</Label>
+                  <Input 
+                  type="select"
                   name="location"
                   value={this.state.location}
                   onChange={this.handleChange.bind(this,'location')}
@@ -139,23 +144,24 @@ render() {
                     <option value='Los Angeles'>Greater Los Angeles </option>
                     <option value='Ventura County'>Ventura County </option>
                     <option value='Riverside County'>Riverside County </option>
-                  </Form.Control>
-                </Form.Group>
-                <Form.Group  controlId="formBasicCity">
-                  <Form.Label>City</Form.Label>
-                  <Form.Control
+                  </Input>
+                </FormGroup>
+                <FormGroup  controlId="formBasicCity">
+                  <Label>City</Label>
+                  <Input
                   type="text"
                   name="city"
                 className="text-primary"
                   value={this.state.city}
                   onChange={this.handleChange.bind(this,'city')}
+                  placeholder="City"
                   >
-                  </Form.Control>
-                </Form.Group>
-                <Form.Group controlId="formBasicService">
-                  <Form.Label>Service</Form.Label>
-                  <Form.Control
-                  as="select"
+                  </Input>
+                </FormGroup>
+                <FormGroup controlId="formBasicService">
+                  <Label>Service</Label>
+                  <Input
+                  type="select"
                   name="service"
                   value="Patrol Security"
                   onChange={this.handleChange.bind(this,'service')}
@@ -163,21 +169,27 @@ render() {
                     <option value='Patrol Security'>Patrol Security </option>
                     <option value='Residential Security'>Residential Security </option>
                     <option value='Alarm Response'>Alarm Response </option>
-                  </Form.Control>
-                </Form.Group>
-                <Form.Group controlId="formBasicDescription">
-                    <Form.Label>Description</Form.Label>
-                    <Form.Control
-                      as="textarea"
-                      type='description'
+                  </Input>
+                </FormGroup>
+                <FormGroup controlId="formBasicDescription">
+                    <Label>Description</Label>
+                    <Input
+                      type="textarea"
                       placeholder='Details about the service you require'
                       value={this.state.description}
                       onChange={this.handleChange.bind(this,'description')}
-                    ></Form.Control>
-                  </Form.Group> */}
-<Button variant="primary" type="submit">
-              Submit
-            </Button>
+                    ></Input>
+                  </FormGroup>
+                  <Button
+                    block
+                    className="m-2" 
+                    color="success" 
+                    type="submit"
+                    onClick={this.toggle.bind(this)}
+                    >Submit</Button>
+                    <Alert color="success" isOpen={this.state.visible} toggle={this.toggle.bind(this)}>
+                    Your quote have been sent! A representative will contact you shortly.
+                  </Alert>
           </Form>
       </>
     )

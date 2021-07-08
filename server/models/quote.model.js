@@ -2,13 +2,17 @@ const mongoose = require('mongoose');
 const QuoteSchema = new mongoose.Schema({
   first_name: {
     type: String,
-    required: [true, "Please enter your first name."],
+    required: [true, "Please enter your name."],
     minlength: [3, "First name must be at least 3 characters."]
   },
   last_name: {
     type: String,
-    required: [true, "Please enter your last name."],
+    required: [true, "Please enter your name."],
     minlength: [3, "Last name must be at least 3 characters."]
+  },
+  phone: {
+    type: String,
+    minlength: [3, "Phone number must be at least 10 digits."],
   },
   email: {
     type: String,
@@ -20,10 +24,6 @@ const QuoteSchema = new mongoose.Schema({
   city: {
     type: String,
     minlength: [3, "City must be at least 3 characters."]
-  },
-  phone: {
-    type: String,
-    minlength: [3, "Phone number must be at least 10 digits."],
   },
   location: {
     type: String,

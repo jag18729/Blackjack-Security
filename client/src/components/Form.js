@@ -2,18 +2,8 @@ import React, { useState } from 'react';
 import { Alert, Container, Form, Button, Row, Col} from 'react-bootstrap';
 import emailjs from 'emailjs-com';
 
-// first_name": "Rafael",
-//     "last_name": "Garcia",
-//     "email":"r@123.com",
-//     "company":"usa",
-//     "city":"Los Angeles, CA",
-//     "phone":"8187418210",
-//     "location":"Los Angeles",
-//     "service":"Residential",
-//     "description": "blahh"
-
 export default props => {
-  const { quote, onSubmitProp, errors } = props;
+  const { onSubmitProp, errors } = props;
   const [first_name, setFirstName] = useState("");
   const [last_name, setLastName] = useState("");
   const [email, setEmail] = useState('');
@@ -36,10 +26,21 @@ export default props => {
   const [location, setSelectedLocation] = useState(locations[0]);
   const [service, setSelectedService] = useState(services[0]);
   // const [errors, setErrors]= useState()
-  var [sent, setSent] = useState(false);
+   const [sent, setSent] = useState(false);
   const onSubmitHandler = (e) => {
     e.preventDefault();
-    console.log('sent');
+    // console.log('sent');
+    // let templateParams = {
+    //   first_name: first_name,
+    //   last_name:last_name,
+    //   email: email,
+    //   company: company,
+    //   city: city,
+    //   phone:phone,
+    //   location: location,
+    //   service: service,
+    //   description: description,
+    // }
     emailjs.sendForm('service_cjqdoji', 'template_ypari0h', e.target, 'user_pQsMaKVuEoXJYQNinWsxk')
       .then((result) => {
           console.log(result.text);
@@ -48,34 +49,42 @@ export default props => {
           console.log(err.text);
           alert(JSON.stringify(err));
       });
+      onSubmitProp( { first_name, last_name, email, phone, company , location, description, city, service })
       e.target.reset();
-    onSubmitProp({ first_name, last_name, email, company , location, description, city, service })
   }
   // "Quote validation failed: phone: Please enter the best phone number to reach out you."
   return (
     <Container>
-      <Form onSubmit={onSubmitHandler}>
+      <h1 className="display-5">Get a Quote</h1>
+      <Form onSubmit={onSubmitHandler} fluid>
+      {/* {errors.map((err, index) => <h2 key={index}>{err}</h2>)} */}
           <Row>
             <Form.Group controlId='first_name'>
             <Form.Label>First Name</Form.Label>
             <Form.Control
               name="first_name"
-              type='name'
+              type='text'
               placeholder='First Name'
               value={first_name}
-              onChange={(e) => setFirstName(e.target.value)}
+              onChange={(e) => {
+                console.log("e.target.value", e.target.value)
+                setFirstName(e.target.value)}
+              }
             />
           </Form.Group>
           </Row>
           <Row>
-          <Form.Group controlId={last_name}>
+          <Form.Group controlId="last_name">
             <Form.Label>Last Name</Form.Label>
             <Form.Control placeholder="Last Name"
-              type="name"
-              name={last_name}
+              name="last_name"
+              type="text"
               placeholder="Last Name"
               value={last_name}
-              onChange={(e) => setLastName(e.target.value)}
+              onChange={(e) => {
+                console.log("e.target.value", e.target.value)
+                setLastName(e.target.value)}
+              }
             />
           </Form.Group>
         </Row>
@@ -84,10 +93,14 @@ export default props => {
               <Form.Group as={Col} controlId="company">
               <Form.Label>Company</Form.Label>
                 <Form.Control
-                  type='company'
+                  name="company"
+                  type='text'
                   placeholder='Enter Company name'
                   value={company}
-                  onChange={(e) => setCompany(e.target.value)}
+                  onChange={(e) => {
+                    console.log("e.target.value", e.target.value)
+                    setCompany(e.target.value)}
+                  }
                 ></Form.Control>
             </Form.Group>
               </Row>
@@ -96,20 +109,22 @@ export default props => {
             <Form.Group controlId='email'>
               <Form.Label>Email Address</Form.Label>
               <Form.Control
+                name="email"
                 type='email'
                 placeholder='Enter email'
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e) => {setEmail(e.target.value)}}
               ></Form.Control>
             </Form.Group>
             </Row>
               <Form.Group className="mb-3" controlId="phone">
                 <Form.Label>Phone Number</Form.Label>
                 <Form.Control
-                  placeholder="323-123-4567"
+                  name="phone"
                   type="phone"
                   value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
+                  placeholder="323-123-4567"
+                  onChange={(e) => {setPhone(e.target.value)}}
                   />
               </Form.Group>
 
@@ -117,9 +132,10 @@ export default props => {
                 <Form.Group as={Col} controlId="location">
                   <Form.Label>Location</Form.Label>
                   <Form.Control
+                  name="location"
                   as="select"
                   value={location}
-                  onChange={(e) => setSelectedLocation(e.target.value)}
+                  onChange={(e) => {setSelectedLocation(e.target.value)}}
                   >
                   {locations.map((location, index) => <option key={index} >{location}</option>)}
                   </Form.Control>
@@ -130,11 +146,13 @@ export default props => {
                 <Form.Group as={Col} controlId="city">
                   <Form.Label>City</Form.Label>
                   <Form.Control
-                  as="select"
+                  name="city"
+                  type="text"
                   value={city}
-                  onChange={(e) => setCity(e.target.value)}
+                  placeholder="City"
+                  onChange={(e) => {setCity(e.target.value)}}
                   >
-                  {locations.map((location, index) => <option key={index} >{location}</option>)}
+                  {/* {locations.map((location, index) => <option key={index} >{location}</option>)} */}
                   </Form.Control>
                 </Form.Group>
                 </Row>
@@ -143,9 +161,10 @@ export default props => {
                 <Form.Group as={Col} controlId="service">
                   <Form.Label>Service</Form.Label>
                   <Form.Control
+                  name="service"
                   as="select"
                   value={service}
-                  onChange={(e) => setSelectedService(e.target.value)}
+                  onChange={(e) => {setSelectedService(e.target.value)}}
                   >
                   {services.map((service, index) => <option key={index}>{service}</option>)}
                   </Form.Control>
@@ -156,11 +175,12 @@ export default props => {
                 <Form.Group as={Col} controlId="description">
                     <Form.Label>Description</Form.Label>
                     <Form.Control
+                      name="description"
                       as="textarea"
                       type='description'
                       placeholder='Details about the service you require'
                       value={description}
-                      onChange={(e) => setDescription(e.target.value)}
+                      onChange={(e) => {setDescription(e.target.value)}}
                     ></Form.Control>
                   </Form.Group>
                 </Row>
@@ -168,14 +188,14 @@ export default props => {
                   Submit
                 </Button>
           </Form>
-      <Alert variant="success" onClose={() => setSent(true)} dismissible>
+      {/* <Alert variant="success" onClose={() => setSent(true)} dismissible>
         <Alert.Heading>Quote has been sent!</Alert.Heading>
         <p>
           Change this and that and try again. Duis mollis, est non commodo
           luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
           Cras mattis consectetur purus sit amet fermentum.
         </p>
-      </Alert>
+      </Alert> */}
     </Container >
   )
 }
