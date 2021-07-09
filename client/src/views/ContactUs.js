@@ -37,11 +37,10 @@ const ContactUs = () => {
         </Row >
         <Row>
           <Col md={5} className="p-1 m-2" id="contact-us-col-2">
-          <Form errors={errors} onSubmitProp={createQuote} />
           {/* <ContactForm errors={errors} onSubmitProp={createQuote}  /> */}
           </Col>
-          <Col md={6} className="p-1 m-3" id="bulletpoints">
-            <h1 className="display-1">
+          <Col md={6} className="p-1 m-1" id="bulletpoints">
+            <h1 className="display-2">
               <FaQuoteLeft />Free Quote
               </h1>
             <i class="fas fa-quote-left"></i>
@@ -58,6 +57,7 @@ const ContactUs = () => {
               </p>
           </Col>
           </Row>
+          <Form errors={errors} onSubmitProp={createQuote} />
       </Container>
   )
 }

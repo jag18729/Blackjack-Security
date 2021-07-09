@@ -55,7 +55,7 @@ export default props => {
   // "Quote validation failed: phone: Please enter the best phone number to reach out you."
   return (
     <Container>
-      <h1 className="display-5">Get a Quote</h1>
+      <h1 className="display-5">Contact Us</h1>
       <Form onSubmit={onSubmitHandler} fluid>
       {/* {errors.map((err, index) => <h2 key={index}>{err}</h2>)} */}
           <Row>

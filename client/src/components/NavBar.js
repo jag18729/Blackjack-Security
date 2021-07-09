@@ -23,7 +23,7 @@ const NavBar = () => {
               duration={500}
             />
           <Nav className="mr-auto">
-            <Nav.Link id="home-link" href="/">Home</Nav.Link>
+            <Nav.Link id="home-link" href="/home">Home</Nav.Link>
             <Nav.Link id="services-link" href="/services">Services</Nav.Link>
             <Nav.Link id="about-us-link" href="/about-us" >About Us</Nav.Link>
             

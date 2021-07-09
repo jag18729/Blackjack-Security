@@ -11,7 +11,7 @@ body {
 
 /* NavBar */
 .navbar-expand-lg .navbar-collapse {
-  display: flex!important;
+  /* display: flex!important; */
   /* flex-basis: auto; */
   flex-direction: row-reverse;
 }
@@ -66,7 +66,7 @@ navbar-dark .navbar-toggler {
 /* HEADER */
 
 .header-wrapper{
-  height: 100vh;
+  height: auto;
   box-shadow: 1px 1px 10px grey;
   border-radius: 0px 0px 17px 17px;
   background: url('./images/city.jpg');
@@ -243,8 +243,8 @@ width: max-content;
 }
 
 #contact-us-button{
-  width: 21rem;
-  margin: 0rem 28rem 0rem 0rem;
+  /* width: 21rem;
+  margin: 0rem 28rem 0rem 0rem; */
 }
 
 /* about us */
