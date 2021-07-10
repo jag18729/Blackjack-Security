@@ -283,17 +283,19 @@ width: max-content;
 
 /* Contact Us */
 #contact-us-container{
-  background-color: red;
+  background-color: rgb(255, 255, 255);
+  padding-top: 3rem;
+  border-radius: 1%;
 }
 #contact-us-col-1{
-  background-color:blue;
+  /* background-color:blue; */
 }
 
 #contact-us-col-2{
-  background-color:green;
+  /* background-color:green; */
 
 }
 #bulletpoints{
-  background-color: #004f9f;
+  /* background-color: #004f9f; */
 }
 span.name { color:#FF0000;font-weight:bold;font-family:Tahoma;font-size:20 }

@@ -24,13 +24,13 @@ const NavBar = () => {
                   duration: 500,
               })}
               >Services</Nav.Link>
-            <Nav.Link id="about-us-link"  onClick={() => scroller.scrollTo('services', {
+            <Nav.Link id="about-us-link"  onClick={() => scroller.scrollTo('about-us', {
                   smooth: true,
                   offset: 3700,
                   duration: 500,
               })} >About Us</Nav.Link>
             
-            <Nav.Link id="contact-us-link"  onClick={() => scroller.scrollTo('services', {
+            <Nav.Link id="contact-us-link"  onClick={() => scroller.scrollTo('contact-us', {
                   smooth: true,
                   offset: 4100,
                   duration: 500,

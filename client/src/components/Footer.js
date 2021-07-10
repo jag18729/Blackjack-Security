@@ -2,8 +2,8 @@ import SimpleReactFooter from "simple-react-footer";
 import React from 'react'
 
 const Footer = () => {
-    const description = "";
-const title = "Cats";
+    const description = "Blackjack Security continually strives to deliver professional services to customers throughout the greater Los Angeles area. We are insured and licensed through the Bureau of Security & Investigative Services in California. PPO License #120913";
+const title = "More resources";
 const columns = [
     {
         title: "Resources",
@@ -62,10 +62,10 @@ const columns = [
                 linkedin="fluffy_cat_on_linkedin"
                 facebook="fluffy_cat_on_fb"
                 twitter="fluffy_cat_on_twitter"
-                instagram="fluffy_cat_live"
+                instagram="blackjack_privatesecurity/"
                 youtube="UCFt6TSF464J8K82xeA?"
                 pinterest="fluffy_cats_collections"
-                copyright="black"
+                copyright="Black Jack Security LLC"
                 iconColor="black"
                 backgroundColor="bisque"
                 fontColor="black"
