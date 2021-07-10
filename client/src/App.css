@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p&family=Maven+Pro:wght@437&family=Michroma&family=Play&family=Roboto+Condensed:wght@300&display=swap');
-
+#root{
+  background-color:  #212529; 
+}
 
 body {
   font-family: "Roboto Condensed" sans-serif;
+ 
 }
 #logo-title{
   font-family: 'Michroma', sans-serif;
@@ -66,7 +69,7 @@ navbar-dark .navbar-toggler {
 /* HEADER */
 
 .header-wrapper{
-  height: auto;
+  height: 90vh;
   box-shadow: 1px 1px 10px grey;
   border-radius: 0px 0px 17px 17px;
   background: url('./images/city.jpg');
@@ -201,11 +204,11 @@ btn:hover {
   height: 120rem;
 }
 .services-title-text{
-  font-family: 'M PLUS 1p', sans-serif;
+  font-family:  'Michroma', sans-serif;
   padding-top: 3rem;
   text-align: center;
   padding-bottom: 1rem;
-  color: #262626;
+  color: #ffffff;
   font-size: xxx-large;
   text-shadow: 2px 2px 3px #5c5252;
 }
@@ -218,10 +221,10 @@ btn:hover {
   float: right;
 }
 .services-wrapper{
-  background-color: blue;
+  color: #ffffff;
 }
 .card-deck-services{
-  background-color: transparent;
+  background-color: #fff;
   border: thin;
   box-shadow: 1px 1px 14px black;
   border-radius: 8px;
@@ -243,8 +246,8 @@ width: max-content;
 }
 
 #contact-us-button{
-  /* width: 21rem;
-  margin: 0rem 28rem 0rem 0rem; */
+  width: 21rem;
+  margin: 0rem 28rem 0rem 0rem;
 }
 
 /* about us */

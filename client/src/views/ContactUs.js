@@ -36,16 +36,13 @@ const ContactUs = () => {
           </Col>
         </Row >
         <Row>
-          <Col md={5} className="p-1 m-2" id="contact-us-col-2">
-          {/* <ContactForm errors={errors} onSubmitProp={createQuote}  /> */}
-          </Col>
-          <Col md={6} className="p-1 m-1" id="bulletpoints">
-            <h1 className="display-2">
-              <FaQuoteLeft />Free Quote
+        <Col md={6} className="m-3 " id="bulletpoints">
+            <h1 className="display-2 p-2 m-3">
+              <FaQuoteLeft />   Free Quote
               </h1>
             <i class="fas fa-quote-left"></i>
 
-              <p className="m-1">Request a 100% hassle free comprehensive quote custom tailored to your security needs!
+              <p className="m-2 p-2">Request a 100% hassle free comprehensive quote custom tailored to your security needs!
               </p>
               <p className="m-1">
               24/7 Services
@@ -56,8 +53,11 @@ const ContactUs = () => {
               Our company stays up to date with our most advanced digital patrol and reporting software.
               </p>
           </Col>
-          </Row>
+          <Col md={5} className="m-3" id="contact-us-col-2">
           <Form errors={errors} onSubmitProp={createQuote} />
+          {/* <ContactForm errors={errors} onSubmitProp={createQuote}  /> */}
+          </Col>
+          </Row>
       </Container>
   )
 }

@@ -55,7 +55,7 @@ export default props => {
   // "Quote validation failed: phone: Please enter the best phone number to reach out you."
   return (
     <Container>
-      <h1 className="display-5">Contact Us</h1>
+      <h1 className="display-5 mt-5">Contact Us</h1>
       <Form onSubmit={onSubmitHandler} fluid>
       {/* {errors.map((err, index) => <h2 key={index}>{err}</h2>)} */}
           <Row>
@@ -67,7 +67,6 @@ export default props => {
               placeholder='First Name'
               value={first_name}
               onChange={(e) => {
-                console.log("e.target.value", e.target.value)
                 setFirstName(e.target.value)}
               }
             />
@@ -81,7 +80,6 @@ export default props => {
               placeholder="Last Name"
               value={last_name}
               onChange={(e) => {
-                console.log("e.target.value", e.target.value)
                 setLastName(e.target.value)}
               }
               />
@@ -98,7 +96,6 @@ export default props => {
                   placeholder='Enter Company name'
                   value={company}
                   onChange={(e) => {
-                    console.log("e.target.value", e.target.value)
                     setCompany(e.target.value)}
                   }
                 ></Form.Control>
@@ -184,7 +181,7 @@ export default props => {
                     ></Form.Control>
                   </Form.Group>
                 </Row>
-                <Button className="pt-1" size="lg" variant="success" type="submit" width="40em">
+                <Button className="p-1 m-3" id="contact-us-button" size="lg" variant="success" type="submit" >
                   Submit
                 </Button>
           </Form>
