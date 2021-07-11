@@ -4,10 +4,11 @@ import React from 'react';
 import Typewriter from 'typewriter-effect';
 import Services from '../components/Services'
 import ContactUs from './ContactUs';
+import { scroller } from "react-scroll";
 
 const Home = () => {
     return (
-        <div name='services'>
+        <div name='home'>
             <div className="header-wrapper">
       <Container  className="p-5 header-main" >
       <Jumbotron >
@@ -24,7 +25,11 @@ const Home = () => {
             }}
             />
           <br />
-        <Button size="lg" variant="danger" id="contact-us-button" block  href="/contact-us">Talk to a Protector
+        <Button size="lg" variant="danger" id="contact-us-button" block  onClick={() => scroller.scrollTo('contact-us', {
+                  smooth: true,
+                  offset: -35,
+                  duration: 500,
+              })}>Talk to a Protector
         </Button>   
         </div>
         </Jumbotron>

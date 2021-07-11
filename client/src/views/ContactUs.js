@@ -23,7 +23,8 @@ const ContactUs = () => {
       })
   }
   return (
-      <Container  id="contact-us-container">
+    <div id="form-wrap">;
+      <Container  id="contact-us-container" name="about-us">
         <Image src="https://wallpapercave.com/wp/wp7618626.jpg" fluid />
         <Row>
           <Col md={12}  className="p-5" id="contact-us-col-1" >
@@ -53,12 +54,13 @@ const ContactUs = () => {
               Our company stays up to date with our most advanced digital patrol and reporting software.
               </p>
           </Col>
-          <Col md={5} className="m-3" id="contact-us-col-2">
-          <Form errors={errors} onSubmitProp={createQuote} />
+          <Col md={5} className="m-3" id="contact-us-col-2" name="contact-us">
+          <Form errors={errors} onSubmitProp={createQuote}  />
           {/* <ContactForm errors={errors} onSubmitProp={createQuote}  /> */}
           </Col>
           </Row>
       </Container>
+      </div>
   )
 }
 

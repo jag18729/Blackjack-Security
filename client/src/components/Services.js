@@ -4,7 +4,7 @@ import { Card, CardDeck, Container } from 'react-bootstrap';
 
 const Services = () => {
   return (
-    <div id="services-link">
+    <div id="services-link" name="services">
       <Container className="services-wrapper"> 
         <h2 className='services-title-text'>Services</h2>
         

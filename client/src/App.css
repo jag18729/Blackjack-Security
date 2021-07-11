@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p&family=Maven+Pro:wght@437&family=Michroma&family=Play&family=Roboto+Condensed:wght@300&display=swap');
 #root{
-  background-color:  #212529; 
+  background-color:  hsl( 100%, saturation, lightness); 
 }
 
 body {
@@ -70,6 +70,7 @@ navbar-dark .navbar-toggler {
 
 .header-wrapper{
   height: 90vh;
+  margin-top: 4rem;
   box-shadow: 1px 1px 10px grey;
   border-radius: 0px 0px 17px 17px;
   background: url('./images/city.jpg');
@@ -198,7 +199,7 @@ btn:hover {
 }
 
 .services-title{
-  background-color: #ffff;
+  background-color: hsl( 100%, 100%, 100%);
   text-align: center;
   color:rgb(234, 38, 45);
   height: 120rem;
@@ -208,7 +209,7 @@ btn:hover {
   padding-top: 3rem;
   text-align: center;
   padding-bottom: 1rem;
-  color: #ffffff;
+  color: hsl(368, 0%, 27%);
   font-size: xxx-large;
   text-shadow: 2px 2px 3px #5c5252;
 }
