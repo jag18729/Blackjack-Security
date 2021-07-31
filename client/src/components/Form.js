@@ -11,7 +11,7 @@ export default props => {
   const [description, setDescription] = useState('');
   const [city, setCity] = useState('');
   const [phone, setPhone] = useState("");
-
+  
   const locations = [
     'Los Angeles County',
     'Ventura County',
@@ -25,30 +25,23 @@ export default props => {
   ];
   const [location, setSelectedLocation] = useState(locations[0]);
   const [service, setSelectedService] = useState(services[0]);
+  const [validated, setValidated] = useState(false);
   // const [errors, setErrors]= useState()
-   const [sent, setSent] = useState(false);
   const onSubmitHandler = (e) => {
-    e.preventDefault();
-    // console.log('sent');
-    // let templateParams = {
-    //   first_name: first_name,
-    //   last_name:last_name,
-    //   email: email,
-    //   company: company,
-    //   city: city,
-    //   phone:phone,
-    //   location: location,
-    //   service: service,
-    //   description: description,
-    // }
+    const form = e.currentTarget;
+    if(form.checkValidity(err)=== false){
+      e.preventDefault();
+      e.stopPropagation();
+      (err) => {
+        console.log(err.text);
+        alert(JSON.stringify(err));
+    }
+    } setValidated(true);
     emailjs.sendForm('service_cjqdoji', 'template_ypari0h', e.target, 'user_pQsMaKVuEoXJYQNinWsxk')
       .then((result) => {
-          console.log(result.text);
-          alert('Sent!');
-      }, (err) => {
-          console.log(err.text);
-          alert(JSON.stringify(err));
-      });
+        console.log(result.text);
+          alert('Your quote has been submitted, a protector will contact you shortly.');
+        });
       onSubmitProp( { first_name, last_name, email, phone, company , location, description, city, service })
       e.target.reset();
   }
@@ -56,12 +49,13 @@ export default props => {
   return (
     <Container>
       <h1 className="display-5 mt-5">Contact Us</h1>
-      <Form onSubmit={onSubmitHandler} fluid>
+      <Form noValidate validated={validated} onSubmit={onSubmitHandler} fluid>
       {/* {errors.map((err, index) => <h2 key={index}>{err}</h2>)} */}
           <Row>
           <Form.Group as={Col} controlId='first_name'>
             <Form.Label>First Name</Form.Label>
             <Form.Control
+              required
               name="first_name"
               type='text'
               placeholder='First Name'
@@ -76,6 +70,7 @@ export default props => {
             <Form.Label>Last Name</Form.Label>
             <Form.Control placeholder="Last Name"
               name="last_name"
+              required
               type="text"
               placeholder="Last Name"
               value={last_name}
@@ -93,6 +88,7 @@ export default props => {
                 <Form.Control
                   name="company"
                   type='text'
+                  required
                   placeholder='Enter Company name'
                   value={company}
                   onChange={(e) => {
@@ -108,6 +104,7 @@ export default props => {
               <Form.Control
                 name="email"
                 type='email'
+                required
                 placeholder='Enter email'
                 value={email}
                 onChange={(e) => {setEmail(e.target.value)}}
@@ -117,6 +114,7 @@ export default props => {
               <Form.Group className="mb-3" controlId="phone">
                 <Form.Label>Phone Number</Form.Label>
                 <Form.Control
+                  required
                   name="phone"
                   type="phone"
                   value={phone}
@@ -143,6 +141,7 @@ export default props => {
                 <Form.Group as={Col} controlId="city">
                   <Form.Label>City</Form.Label>
                   <Form.Control
+                  required
                   name="city"
                   type="text"
                   value={city}
@@ -158,6 +157,7 @@ export default props => {
                 <Form.Group as={Col} controlId="service">
                   <Form.Label>Service</Form.Label>
                   <Form.Control
+                  required
                   name="service"
                   as="select"
                   value={service}
@@ -172,6 +172,7 @@ export default props => {
                 <Form.Group as={Col} controlId="description">
                     <Form.Label>Description</Form.Label>
                     <Form.Control
+                      required
                       name="description"
                       as="textarea"
                       type='description'

@@ -54,6 +54,7 @@ const ContactUs = () => {
               Our company stays up to date with our most advanced digital patrol and reporting software.
               </p>
           </Col>
+            <Image src="https://static.wixstatic.com/media/05f917_6bbf590413e94b828e4d47707cfaa833~mv2.jpg/v1/fill/w_446,h_640,al_c,q_90/05f917_6bbf590413e94b828e4d47707cfaa833~mv2.webp" alt="bg.jpg" styled="width: 522px; height: 749px; object-fit: cover; object-position: 50% 50%;" />
           <Col md={5} className="m-3" id="contact-us-col-2" name="contact-us">
           <Form errors={errors} onSubmitProp={createQuote}  />
           {/* <ContactForm errors={errors} onSubmitProp={createQuote}  /> */}

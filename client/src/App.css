@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p&family=Maven+Pro:wght@437&family=Michroma&family=Play&family=Roboto+Condensed:wght@300&display=swap');
 #root{
-  background-color:  hsl( 100%, saturation, lightness); 
+  background-color: #212529;
 }
 
 body {
@@ -115,6 +115,10 @@ navbar-dark .navbar-toggler {
 
 
 @media(max-width: 768px){
+  #root{
+    background-color: #ffffff;
+  }
+
   .main-info h3{
     font-size: 1.1rem !important;
   }
@@ -133,10 +137,15 @@ navbar-dark .navbar-toggler {
   }
   .card-deck-services{
     flex-flow: wrap;
+    width: inherit;
   }
   .header-main{
   box-shadow: none;
+  
 }
+.tsparticles-canvas {
+    display: none;
+  }
 .btn-main-offer{
   border: 1px solid red;
   text-transform: uppercase;
@@ -146,7 +155,12 @@ navbar-dark .navbar-toggler {
   margin: 2rem;
 }
 #contact-us-button{
-  border-color: #004f9f;
+
+}
+
+#contact-us-button{
+  width: -webkit-fill-available;
+  margin: 0rem 28rem 0rem 0rem;
 }
 }
 /* btn{
@@ -172,12 +186,6 @@ btn:hover {
   text-decoration: none;
   background-color: rgb(109, 218, 73);
   color: rgb(15, 3, 148);
-}
-
-@media(max-width: 768px){
-  .tsparticles-canvas {
-    display: none;
-  }
 }
 
 .card-deck-services{
@@ -247,7 +255,7 @@ width: max-content;
 }
 
 #contact-us-button{
-  width: 21rem;
+  width: -webkit-fill-available;
   margin: 0rem 28rem 0rem 0rem;
 }
 
